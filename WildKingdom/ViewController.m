@@ -11,7 +11,7 @@
 #define Search @"lion"
 
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property NSMutableArray *pictures;
 @end
 
@@ -32,6 +32,14 @@
             NSArray *photos = results[@"photos"][@"photo"];
         }
     }];
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 0;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
 }
 
 - (void)didReceiveMemoryWarning
