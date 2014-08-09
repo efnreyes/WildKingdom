@@ -7,9 +7,12 @@
 //
 
 #import "ViewController.h"
+#define FlickrAPIKey @"606091ccce9e82a52788eb9ef3b07a47"
+#define Search @"lion"
+
 
 @interface ViewController ()
-
+@property NSMutableArray *pictures;
 @end
 
 @implementation ViewController
@@ -17,7 +20,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&tags=%@&per_page=10&format=json&nojsoncallback=1", FlickrAPIKey, Search];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError) {
+            NSLog(@"# Error: %@", connectionError);
+        } else {
+            self.pictures = [[NSMutableArray alloc] init];
+            NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSArray *photos = results[@"photos"][@"photo"];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
