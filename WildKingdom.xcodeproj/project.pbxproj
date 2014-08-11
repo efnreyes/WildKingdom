@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F989AE25199692A1005F5A98 /* ImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F989AE24199692A1005F5A98 /* ImageViewCell.m */; };
 		F9F52EE8199565540022801D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F52EE7199565540022801D /* Foundation.framework */; };
 		F9F52EEA199565540022801D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F52EE9199565540022801D /* CoreGraphics.framework */; };
 		F9F52EEC199565540022801D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F52EEB199565540022801D /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F989AE23199692A1005F5A98 /* ImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewCell.h; sourceTree = "<group>"; };
+		F989AE24199692A1005F5A98 /* ImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewCell.m; sourceTree = "<group>"; };
 		F9F52EE4199565540022801D /* WildKingdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildKingdom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F52EE7199565540022801D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9F52EE9199565540022801D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				F9F52EFD199565540022801D /* ViewController.m */,
 				F9F52EFF199565540022801D /* Images.xcassets */,
 				F9F52EEE199565540022801D /* Supporting Files */,
+				F989AE23199692A1005F5A98 /* ImageViewCell.h */,
+				F989AE24199692A1005F5A98 /* ImageViewCell.m */,
 			);
 			path = WildKingdom;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F989AE25199692A1005F5A98 /* ImageViewCell.m in Sources */,
 				F9F52EFE199565540022801D /* ViewController.m in Sources */,
 				F9F52EF8199565540022801D /* AppDelegate.m in Sources */,
 				F9F52EF4199565540022801D /* main.m in Sources */,
@@ -456,6 +462,7 @@
 				F9F52F18199565540022801D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9F52F19199565540022801D /* Build configuration list for PBXNativeTarget "WildKingdomTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				F9F52F1B199565540022801D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
